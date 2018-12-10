@@ -36,3 +36,9 @@ NOTE:
 > References listed in `docs/`
 
 > Default port listed in run.py is 8080 
+
+#### Future Enhancements
+- Better logging 
+- Custom Error handling for  4xx / 5xx errors
+- End to End test cases
+
