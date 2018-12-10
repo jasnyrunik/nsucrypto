@@ -1,0 +1,169 @@
+{
+  "swagger": "2.0",
+  "host": "localhost:5000",
+  "schemes": [
+    "http"
+  ],
+  "info": {
+    "description": "Not so useful Crypto Service using AES",
+    "title": "NsuCryptoService API",
+    "version": "0.0.1",
+    "termsOfService": "None",
+    "contact": {
+      "name": "Jaswanth Veerapaneni",
+      "url": "None",
+      "email": "jaswanth.bharath@gmail.com"
+    },
+    "license": {
+      "name": "None",
+      "url": "None"
+    }
+  },
+  "basePath": "/",
+  "paths": {
+    "/ping": {
+      "get": {
+        "description": "Check API server health",
+        "summary": "returns \"pong\" if healthy",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "None"
+        },
+        "operationId": "None",
+        "tags": [
+          "api2swagger"
+        ],
+        "produces": [
+          "text/html; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [],
+        "parameters": []
+      }
+    },
+    "/api/pushandrecalculate": {
+      "post": {
+        "description": "Accept a single number as string and re calculate running average and deviation of all numbers ever accepted",
+        "summary": "Accept a single number as string and re calculate running average and deviation of all numbers ever accepted",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "None"
+        },
+        "operationId": "None",
+        "tags": [
+          "None"
+        ],
+        "produces": [
+          "text/html; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Number",
+            "description": "A Single (1) Number",
+            "required": true,
+            "schema": "4"
+          }
+        ]
+      }
+    },
+    "/api/pushrecalculateandencrypt": {
+      "post": {
+        "description": "Accept a single number as string and re calculate running average and deviation of all numbers ever accepted, returns encrypted base64 encoded values in the format \"{ runningAvg, runningDeviation}\"",
+        "summary": "None",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "None"
+        },
+        "operationId": "None",
+        "tags": [
+          "None"
+        ],
+        "produces": [
+          "text/html; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Number",
+            "description": "A Single Number",
+            "required": true,
+            "schema": "4"
+          }
+        ]
+      }
+    },
+    "/api/reset": {
+      "get": {
+        "description": "Resets running average and deviation values to null ",
+        "summary": "None",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "None"
+        },
+        "operationId": "None",
+        "tags": [
+          "None"
+        ],
+        "produces": [
+          "text/html; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [],
+        "parameters": []
+      }
+    },
+    "/api/decrypt": {
+      "post": {
+        "description": "Decode Base64 encoded string and then decrypt the AES Encrypted Text , returns data in the format \"{runningAvg, runningDeviation}\"",
+        "summary": "None",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "None"
+        },
+        "operationId": "None",
+        "tags": [
+          "None"
+        ],
+        "produces": [
+          "text/html; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "EncodedString",
+            "description": "Base64 Encoded AES Encrypted String ",
+            "required": true,
+            "schema": "0cxoWcuLN4dRiJA/bj15Ng=="
+          }
+        ]
+      }
+    }
+  }
+}
