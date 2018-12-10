@@ -22,7 +22,9 @@ curl -X POST http://127.0.0.1:8080/api/pushrecalculateandencrypt -d "1"
 curl -X POST http://127.0.0.1:8080/api/pushandrecalculate -d "1"
 ```
 
-To run tests :  `python app/tests/test_main.py`
+
+To run tests :  `cd app/tests/;python test_main.py`
+*** Using sys path module for test script to import app , please make sure current working directory is within app/tests/ before running the test script. 
 
 To reset statistics : `curl -X GET http://127.0.0.1:8080/api/reset`
 
