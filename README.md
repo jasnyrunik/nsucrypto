@@ -33,6 +33,8 @@ API Specification is listed in the docs/
 NOTE:
 > Please uninstall Crypto, pycrypto python modules if previously installed (MacOS X) and then run pip install requirements
 
+> Windows Machines would need  Microsoft Visual C++ 9.0  to install pycrypto ( https://www.microsoft.com/en-us/download/details.aspx?id=44266 ) 
+
 > References listed in `docs/`
 
 > Default port listed in run.py is 8080 
