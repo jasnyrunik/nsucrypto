@@ -8,3 +8,4 @@ nose
 pycryptodome
 pkcs7
 pytest
+flask_testing
